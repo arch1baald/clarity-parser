@@ -87,6 +87,7 @@ public class Parse {
         public Integer charges;
         public Integer secondary_charges;
 		public Integer life_state;
+        public Integer hp;
 		public Integer level;
 		public Integer kills;
 		public Integer deaths;
@@ -681,6 +682,7 @@ public class Parse {
                         entry.unit = e.getDtClass().getDtName();
                         entry.hero_id = hero;
                         entry.life_state = getEntityProperty(e, "m_lifeState", null);
+                        entry.hp = getEntityProperty(e, "m_iHealth", null);
                         //check if hero has been assigned to entity
                         if (hero > 0) 
                         {
